@@ -1,0 +1,103 @@
+.new {
+    margin-top: 17px;
+
+    > div {
+        &:first-child {
+            margin-right: 5px;
+        }
+    }
+
+    .big {
+        display: flex;
+
+        > .content {
+            flex: 1;
+
+            > div {
+                position: relative;
+
+                > img {
+                    width: 100%;
+                }
+
+                .info {
+                    position: absolute;
+                    bottom: 0;
+                    height: 136px;
+                    width: calc(100% - 29 * 2px);
+                    background-color: rgba(0, 0, 0, .6);
+                    padding: 29px;
+                    color: white;
+
+                    > h1 {
+                        font-size: 26pt;
+                        font-weight: lighter;
+                        color: #ffa621;
+                    }
+
+                    p {
+                        font-size: 12pt;
+                    }
+                }
+            }
+        }
+    }
+
+    .others {
+        .content {
+            
+            
+        }
+    }
+}
+
+.content {
+    border-radius: 4px;
+    background: white;
+    background: linear-gradient(120deg, white 0%, #e0eef6 100%);
+    box-shadow: 0px 0px 10px rgba(0,0,0,.24);
+    border: 1px solid rgba(0,0,0,0.1);
+    margin-bottom: 6px;
+    padding: 8px 11px;
+    user-select: none;
+    display: block;
+    text-decoration: none;
+    color: rgb(74,75,75);
+
+    &:hover {
+        background: linear-gradient(120deg, white 0%, #c6e0ef 100%);
+    }
+
+    p {
+        font-size: 13pt;
+
+        &:first-child {
+            font-family: 'Segoe Light', 'Segoe UI Semibold', Segoe, 'Segoe UI', Arial, sans-serif;
+            font-weight: normal;
+        }
+    }
+    
+    img {
+        &.icon {
+            margin-top: auto;
+            width: 32px;
+            height: 32px;
+            margin-bottom: 7px;
+        }
+
+        &.thumbnail {
+            width: 204px;
+            height: 140px;
+            margin-left: 6px;
+        }
+    }
+
+    .column {
+        width: 155px;
+    }
+
+    &.small {
+        box-shadow: none;
+        flex: 1;
+    }
+}

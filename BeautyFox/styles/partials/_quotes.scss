@@ -1,0 +1,20 @@
+
+.quotes {
+    font-family: 'Segoe Light', 'Segoe UI Light', Segoe, 'Segoe UI', Arial, sans-serif;
+    margin-top: 14px;
+    animation: fadeIn .5s linear forwards;
+    opacity: 0;
+
+    > blockquote {
+        margin-bottom: .2em;
+        color: #07ABD7;
+        font-size: 25pt;
+        line-height: 1.2;
+    }
+
+    > cite {
+        font-size: 13pt;
+        font-style: normal;
+        color: rgba(0,0,0,.75);
+    }
+}

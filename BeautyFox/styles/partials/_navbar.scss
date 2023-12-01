@@ -1,0 +1,109 @@
+nav {
+    &.navbar {
+        display: flex;
+        align-items: center;
+        height: 39px;
+        background: rgb(51,150,209);
+        background: linear-gradient(15deg, rgba(51,150,209,1) 0%, #ffa621 25%, rgba(51,150,209,1) 50%, rgba(131,50,145,1) 75%, rgba(51,150,209,1) 100%);
+        background-size: 400% 100%;
+        animation: gradient 50s infinite linear;
+        font-size: 14pt;
+        z-index: 2;
+
+        > .container {
+            display: flex;
+            height: 100%;
+            
+            > ul {
+                display: flex;
+                list-style-type: none;
+                padding: 0;
+                height: 100%;
+
+                &:last-child {
+                    margin-left: auto;
+                }
+
+                > li {
+                    > a {
+                        color: white;
+                        text-decoration: none;
+                        margin-right: 23px;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+
+                        &:hover {
+                            opacity: .5;
+                        }
+
+                        > img {
+                            margin-right: 6px;
+                        }
+                    }
+                    
+                    &.icon {
+                        > a {
+                            margin-right: 16px;
+
+                            img {
+                                margin-right: 0;
+                            }
+                        }
+                    }
+
+                    &.connect {
+                        > a {
+                            margin-left: 18px;
+                            margin-right: 0;
+
+                            img {
+                                height: 18px;
+                                width: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.whatsnew {
+    font-size: 14pt;
+    background: rgb(51,150,209);
+    background: linear-gradient(-15deg, rgba(51,150,209,1) 0%, #ffa621 25%, rgba(51,150,209,1) 50%, rgba(131,50,145,1) 75%, rgba(51,150,209,1) 100%);
+    background-size: 400% 100%;
+    animation: gradient 50s infinite linear reverse;
+    color: white;
+    height: 32px;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgb(0,0,0);
+        background: linear-gradient(0deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.3) 100%);
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        margin-right: 23px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            opacity: .5;
+        }
+
+        > img {
+            margin-right: 6px;
+        }
+    }
+}

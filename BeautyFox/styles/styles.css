@@ -1,0 +1,300 @@
+body {
+  font-family: "Segoe Regular", Segoe, "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 64px;
+}
+
+ul, a, p, h1, h2, h3, h4, h5, h6, blockquote {
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
+@keyframes gradient {
+  from {
+    background-position-x: 200%;
+  }
+  to {
+    background-position-x: 600%;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideRight {
+  from {
+    transform: translateX(-150px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+@keyframes slideLeft {
+  from {
+    transform: translateX(100px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+@keyframes highlightOthers {
+  0% {
+    transform: translateY(-300px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes highlightBig {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.flex {
+  display: flex;
+}
+.flex.column {
+  flex-direction: column;
+}
+.flex.row {
+  flex-direction: row;
+}
+
+.container {
+  position: relative;
+  width: 1300px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+nav.navbar {
+  display: flex;
+  align-items: center;
+  height: 39px;
+  background: rgb(51, 150, 209);
+  background: linear-gradient(15deg, rgb(51, 150, 209) 0%, #ffa621 25%, rgb(51, 150, 209) 50%, rgb(131, 50, 145) 75%, rgb(51, 150, 209) 100%);
+  background-size: 400% 100%;
+  animation: gradient 50s infinite linear;
+  font-size: 14pt;
+  z-index: 2;
+}
+nav.navbar > .container {
+  display: flex;
+  height: 100%;
+}
+nav.navbar > .container > ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  height: 100%;
+}
+nav.navbar > .container > ul:last-child {
+  margin-left: auto;
+}
+nav.navbar > .container > ul > li > a {
+  color: white;
+  text-decoration: none;
+  margin-right: 23px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+nav.navbar > .container > ul > li > a:hover {
+  opacity: 0.5;
+}
+nav.navbar > .container > ul > li > a > img {
+  margin-right: 6px;
+}
+nav.navbar > .container > ul > li.icon > a {
+  margin-right: 16px;
+}
+nav.navbar > .container > ul > li.icon > a img {
+  margin-right: 0;
+}
+nav.navbar > .container > ul > li.connect > a {
+  margin-left: 18px;
+  margin-right: 0;
+}
+nav.navbar > .container > ul > li.connect > a img {
+  height: 18px;
+  width: 18px;
+}
+
+.whatsnew {
+  font-size: 14pt;
+  background: rgb(51, 150, 209);
+  background: linear-gradient(-15deg, rgb(51, 150, 209) 0%, #ffa621 25%, rgb(51, 150, 209) 50%, rgb(131, 50, 145) 75%, rgb(51, 150, 209) 100%);
+  background-size: 400% 100%;
+  animation: gradient 50s infinite linear reverse;
+  color: white;
+  height: 32px;
+  position: relative;
+}
+.whatsnew::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.3) 100%);
+}
+.whatsnew a {
+  color: white;
+  text-decoration: none;
+  margin-right: 23px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.whatsnew a:hover {
+  opacity: 0.5;
+}
+.whatsnew a > img {
+  margin-right: 6px;
+}
+
+a.button, button.button {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  text-decoration: none;
+  display: block;
+  color: black;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+a.button.buttonDownload, button.button.buttonDownload {
+  font-family: "Segoe Light", "Segoe UI Light", Segoe, "Segoe UI", Arial, sans-serif;
+  color: white;
+  font-size: 16pt;
+  background: rgb(235, 42, 41);
+  background: linear-gradient(0deg, rgb(235, 42, 41) 0%, rgb(254, 196, 50) 100%);
+  border-radius: 1px;
+  padding: 2px 11px 7px 11px;
+}
+a.button.buttonDownloadBlue, button.button.buttonDownloadBlue {
+  font-family: "Segoe Light", "Segoe UI Light", Segoe, "Segoe UI", Arial, sans-serif;
+  color: white;
+  font-size: 24pt;
+  background: rgb(47, 36, 114);
+  background: linear-gradient(0deg, rgb(47, 36, 114) 0%, rgb(5, 129, 189) 50%, rgb(129, 192, 227) 100%);
+  border-radius: 1px;
+  border: 1px solid white;
+  padding: 2px 45px 7px 45px;
+}
+
+.new {
+  margin-top: 17px;
+}
+.new > div:first-child {
+  margin-right: 5px;
+}
+.new .big {
+  display: flex;
+}
+.new .big > .content {
+  flex: 1;
+}
+.new .big > .content > div {
+  position: relative;
+}
+.new .big > .content > div > img {
+  width: 100%;
+}
+.new .big > .content > div .info {
+  position: absolute;
+  bottom: 0;
+  height: 136px;
+  width: calc(100% - 58px);
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 29px;
+  color: white;
+}
+.new .big > .content > div .info > h1 {
+  font-size: 26pt;
+  font-weight: lighter;
+  color: #ffa621;
+}
+.new .big > .content > div .info p {
+  font-size: 12pt;
+}
+.content {
+  border-radius: 4px;
+  background: white;
+  background: linear-gradient(120deg, white 0%, #e0eef6 100%);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.24);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 6px;
+  padding: 8px 11px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  display: block;
+  text-decoration: none;
+  color: rgb(74, 75, 75);
+}
+.content:hover {
+  background: linear-gradient(120deg, white 0%, #c6e0ef 100%);
+}
+.content p {
+  font-size: 13pt;
+}
+.content p:first-child {
+  font-family: "Segoe Light", "Segoe UI Semibold", Segoe, "Segoe UI", Arial, sans-serif;
+  font-weight: normal;
+}
+.content img.icon {
+  margin-top: auto;
+  width: 32px;
+  height: 32px;
+  margin-bottom: 7px;
+}
+.content img.thumbnail {
+  width: 204px;
+  height: 140px;
+  margin-left: 6px;
+}
+.content .column {
+  width: 155px;
+}
+.content.small {
+  box-shadow: none;
+  flex: 1;
+}
+
+.quotes {
+  font-family: "Segoe Light", "Segoe UI Light", Segoe, "Segoe UI", Arial, sans-serif;
+  margin-top: 14px;
+  animation: fadeIn 0.5s linear forwards;
+  opacity: 0;
+}
+.quotes > blockquote {
+  margin-bottom: 0.2em;
+  color: #07ABD7;
+  font-size: 25pt;
+  line-height: 1.2;
+}
+.quotes > cite {
+  font-size: 13pt;
+  font-style: normal;
+  color: rgba(0, 0, 0, 0.75);
+}/*# sourceMappingURL=styles.css.map */

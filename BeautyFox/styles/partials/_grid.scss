@@ -1,0 +1,18 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 10px;
+
+    > .first-column {
+        min-width: 100px; /* Set a minimum width for the first column */
+        background-color: lightblue;
+        padding: 10px;
+        width: 688px;
+        height: 389px;
+    }
+    > .second-column {
+        background-color: lightgreen;
+        padding: 10px;
+        height: 121px;;
+    }
+}
